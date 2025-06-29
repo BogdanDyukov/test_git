@@ -1,5 +1,5 @@
-def simple_success_test():
+def test_simple_success():
   assert True
 
-def simple_fail_test():
+def test_simple_fail_test():
   assert False
