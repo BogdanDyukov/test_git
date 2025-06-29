@@ -14,5 +14,5 @@ jobs:
         run: ls -la
 
       - name: Run python script
-        run: python main.py
+        run: python --version
           
