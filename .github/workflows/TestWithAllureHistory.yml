@@ -36,6 +36,7 @@ jobs:
 
       - uses: simple-elf/allure-report-action@master
         if: always()
+        id: allure-report
         with:
           allure_results: allure-results  # Директория с результатами тестов
           gh_pages: gh-pages  # Директория, куда склонировалась ветка gh-pages (получается с прошлым отчетом)
