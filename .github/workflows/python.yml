@@ -1,0 +1,18 @@
+name: PythonCI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run ls
+        run: ls -la
+
+      - name: Run python script
+        run: python main.py
+          
