@@ -12,7 +12,7 @@ jobs:
 
       - name: Шаг 1
         run: exit 1
-        # continue-on-error: true
+        continue-on-error: true
       
       - name: Шаг 2
         run: echo "Этот шаг выполни"
