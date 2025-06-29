@@ -26,6 +26,7 @@ jobs:
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()  # Такая запись аналог той с ${{}}, это старый короткий синтаксис
+        continue-on-error: true
         with:
           ref: gh-pages  # Указание, что клонируем ветку gh-pages
           path: gh-pages  # Клонируем в директорию gh-pages (создается в раб директории раннера)
@@ -36,6 +37,7 @@ jobs:
 
       - uses: simple-elf/allure-report-action@master
         if: always()
+        id: allure-report
         with:
           allure_results: allure-results  # Директория с результатами тестов
           gh_pages: gh-pages  # Директория, куда склонировалась ветка gh-pages (получается с прошлым отчетом)
