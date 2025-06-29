@@ -14,5 +14,7 @@ jobs:
         run: ls -la
 
       - name: Run python script
-        run: python --version
+        run: |
+          python --version
+          google-chrome --product-version
           
