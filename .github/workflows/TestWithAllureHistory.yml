@@ -42,7 +42,6 @@ jobs:
           gh_pages: gh-pages  # Директория, куда склонировалась ветка gh-pages (получается с прошлым отчетом)
           allure_report: allure-report  # Директория, в которую Allure запишет сгенерированный отчет (чистый HTML-отчёт без истории)
           allure_history: allure-history  # Директория, которая будет опубликована на GitHub Pages (финальный отчёт с историей)
-          subfolder: ${{ steps.vars.outputs.date_suffix }}
 
       - name: Check work directory contents
         if: ${{ always() }}
